@@ -1,29 +1,84 @@
 # 🏠 StaySphere
-StaySphere is a short-term property rental website inspired by Airbnb, allowing users to list, discover, and book unique accommodations around the world. Whether you're looking for a cozy apartment for a weekend getaway or a spacious villa for a family vacation, StaySphere connects travelers with diverse properties and hosts.
 
+> A full-stack property rental and booking platform inspired by Airbnb.
 
-## 🚀 Key Features
+StaySphere is a full-stack web application that allows users to discover properties, view detailed listings, manage properties, make bookings, and submit reviews.
 
-- 🏡  **Property Listings**: Hosts can easily list their properties with detailed descriptions, photos, amenities, and pricing.
-- 🔍  **Search & Discovery**: Users can search for properties based on location, dates, price range, property type, and more.
-- 🧑‍💼 **Host Dashboard:**: Add, edit, or remove your property listings
-- 💼 **Booking System**: A seamless booking process allows guests to reserve properties securely.
-- 📱 **Responsive UI:** Clean and mobile-friendly interface using React and Bootstrap
-- 👤 **User Profiles**: Dedicated profiles for both hosts and guests to manage their listings, bookings, and personal information.
+The application follows an MVC-based architecture using **Node.js, Express.js, MongoDB, and EJS**, with **Cloudinary** for property image management and **Render** for deployment.
+
+---
+
+## ✨ Key Features
+
+- 🏡 **Property Listings** – Create, view, update, and delete property listings with images, descriptions, pricing, and location details.
+- 🔍 **Search & Discovery** – Browse and explore available properties.
+- 🔐 **User Authentication** – Registration, login, logout, and session-based authentication.
+- 🧑‍💼 **Host Management** – Manage property listings and booking information.
+- 📅 **Booking System** – Manage property reservations and booking details.
+- ⭐ **Reviews & Ratings** – Users can submit and manage reviews for properties.
+- 📱 **Responsive UI** – Mobile-friendly interface built with EJS, HTML, CSS, JavaScript, and Bootstrap.
+- ☁️ **Cloud Image Storage** – Property images managed using Cloudinary.
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend**: HTML,CSS, JavaScript, Bootstrap, EJS (Embedded JavaScript templates) <br>
-**Backend**: Node.js, Express.js <br>
-**Database**: MongoDB <br>
-**Other Libraries/Tools**: Bootstrap,Font Awesome, Passport.js, bcrypt, Cloudinary
+### 🎨 Frontend
+- HTML5
+- CSS3
+- JavaScript
+- EJS
+- Bootstrap
+- Font Awesome
 
+### ⚙️ Backend
+- Node.js
+- Express.js
+
+### 🗄️ Database
+- MongoDB
+- Mongoose
+
+### 🔐 Authentication & Security
+- Passport.js
+- bcrypt
+- Express Session
+
+### ☁️ Cloud & Deployment
+- Cloudinary
+- Render
+
+### 🔧 Development Tools
+- Git
+- GitHub
+- npm
 
 ---
 
-## 🌐 Live Demo
-https://staysphere-4t14.onrender.com/listings
+## 🏗️ Project Architecture
 
----
+```text
+                    👤 Client
+                       │
+                       ▼
+              🎨 EJS / HTML / CSS
+                       │
+                       ▼
+                ⚙️ Express.js
+                       │
+                       ▼
+                  🛡️ Middleware
+                       │
+                       ▼
+                 🎯 Controllers
+                       │
+                       ▼
+                🗄️ Mongoose Models
+                       │
+                       ▼
+                    MongoDB
+
+                       │
+                       ▼
+                ☁️ Cloudinary
+               Property Images
