@@ -1,0 +1,96 @@
+<% layout('layouts/boilerplate.ejs') -%>
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        
+        .box1 {
+            padding: 1rem 2rem 2rem 2rem;
+            flex: 1;
+        }
+        
+        .f-info {
+            display: none;
+        }
+        
+        .img-card {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .img-card img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+        
+        .main-box {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            height: 550px;
+            border-radius: 0.5rem;
+            background-color: white;
+        }
+        
+        .img-card::after {
+            content: '';
+            position: absolute;
+            right: -1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: black;
+        }
+        
+        @media (max-width: 768px) {
+            .img-card {
+                display: none;
+            }
+            .main-box {
+                height: 50%;
+            }
+        }
+    </style>
+
+    <div class="main-box mt-4">
+        <div class="img-card">
+            <img src="/Assets/signupimg2.jpg" alt="Signup Image" class="img">
+        </div>
+        <div class="box1">
+            <h1 class="col-12 offset-2">Signup on StaySphere</h1>
+            <!-- Username -->
+            <form action="./signup" method="POST" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control" id="username" required>
+                    <div class="valid-feedback">
+                        Good😀!
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" required>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" required>
+                </div>
+
+                <!-- Button -->
+                <button class="btn btn-dark">SignUp</button>
+            </form>
+        </div>
+    </div>
